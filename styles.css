@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.dash {
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 5% 0;
+    -webkit-box-shadow: 3px 3px 3px #2F1B78, 6px 6px 3px #931777, 9px 9px 3px #D43A67, 12px 12px 3px #FA7654, 15px 15px 3px #FFB74F;
+}
+.wpm {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    place-content: center;
+}
+.text {
+    width: 70%;
+    height: 100%;
+    padding: 6px;
+    color: grey;
+    text-align: justify;
+    font-size: 17px;
+}
+.score {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.score div {
+    position: absolute;
+    top: 35px
+}
+.keyBoard {
+    width: 700px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    display: flex;
+    margin-bottom: 15px;
+}
+.row div {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 3px 2px 2px rgb(226, 226, 226);
+
+}
+.scorePlus_anim {
+    animation: scorePlus 0.1s ease-in-out delay 1;
+    background-color: #7BCC6A;
+}
+@keyframes scorePlus {
+    100% {
+        background-color: transparent;
+    }
+}
+.scoreMinus_anim {
+    animation: scoreMinus 0.1s ease-in-out delay 1;
+    background-color: #E93B25;
+}
+@keyframes scoreMinus {
+    100% {
+        background-color: transparent;
+    }
+}
+.anm {
+    animation-name: vib;
+    animation-duration: 0.1s;
+    background-color: #FFB74F;
+}
+@keyframes vib {
+    10% {transform: rotate(3deg);}
+    20% {transform: rotate(-3deg);}
+    30% {transform: rotate(3deg);}
+    40% {transform: rotate(-3deg);}
+    50% {transform: rotate(3deg);}
+    60% {transform: rotate(-3deg);}
+    70% {transform: rotate(3deg);}
+    80% {transform: rotate(-3deg);}
+    90% {transform: rotate(3deg);}
+    100% {transform: rotate(-3deg);}
+}
+#row1 div {
+    margin: 0 10px 0 10px;
+}
+#row2 {
+    margin-left: 60px;
+}
+#row2 div {
+    margin: 0 9px 0 9px;
+}
+#row3 div {
+    margin: 0 9px 0 9px;
+}
+#row3 {
+    margin-left: 20px;
+}
+#row4 div {
+    width: 100px;
+}
+
+/*blinking letter animation*/
+.blink {
+    background-color: #fff;
+    animation: blink 0.5s ease-out infinite;
+}
+@keyframes blink {
+    50% {
+        color: #fff;
+        background-color: rgb(39, 39, 39);
+    }
+}
+/*wrong letter animation*/
+.wrong {
+    color: #fff;
+    animation: wrong 1s linear 1 ;
+    animation-fill-mode: forwards;
+}
+@keyframes wrong {
+    100% {
+        background-color: red;
+    }
+}
+/*rigth letter animation*/
+.right {
+    color: #fff;
+    animation: rigth-an 1s linear 1 ;
+    animation-fill-mode: forwards;
+}
+@keyframes rigth-an {
+    100% {
+        background-color: green;
+    }
+}
