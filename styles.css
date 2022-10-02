@@ -22,6 +22,7 @@ main {
     justify-content: center;
     align-items: flex-start;
     margin: 5% 0;
+    box-shadow: none;
     -webkit-box-shadow: 3px 3px 3px #2F1B78, 6px 6px 3px #931777, 9px 9px 3px #D43A67, 12px 12px 3px #FA7654, 15px 15px 3px #FFB74F;
 }
 .wpm {
