@@ -34,7 +34,6 @@ const preessLetter = (key, e) => {
             istrue = true
         }
     })
-    console.log(istrue + ' the key ' + e.key + ' is in ui?')
     if( istrue) {
         return true
     } else {
@@ -72,7 +71,6 @@ const isload= () => {
             count++
             }
         }
-        console.log('count is = ' + count)
     })
 }
 isload()
@@ -134,4 +132,3 @@ function blinking (inner, indx) {
     let contStr = strArr.join('')
     textDash.innerHTML = contStr
 }
-
