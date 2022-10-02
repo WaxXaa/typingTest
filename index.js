@@ -24,8 +24,6 @@ const textLevels = {
     }
 let textDash = document.querySelector('.text')
 textDash.innerHTML = textLevels.level_1[0]
-
-
 let length = textDash.innerHTML.length
 
 // this function return the key value if the key preesed is one of the ui keys
@@ -43,8 +41,7 @@ const preessLetter = (key, e) => {
         return false
     }
 }
-// this is a funtion that return a promise whit the value of the preessLetter function
-
+// this function check if the key is equal to the text char
 function keyVlidation(char, key) {
     console.log('the text char is = ' + char)
     console.log('the pressed key is = ' + key)
@@ -54,8 +51,7 @@ function keyVlidation(char, key) {
     } else { return false}
 }
 
-// this is an async function that wait until the promise is resolve
-
+// this is the main function whit the eventListener
 const isload= () => {
     let count = 0
     let inner = textDash.textContent
@@ -81,6 +77,7 @@ const isload= () => {
 }
 isload()
 
+//this function paint the key background every time a key is pressed
 document.addEventListener('keyup', e => {
     keys.forEach ( node => {
         if ( node.textContent.toLowerCase() === e.key || node.textContent === e.key || node.textContent === e.code) { //the whitout lwcase fnc becouse of the shift key
@@ -89,6 +86,8 @@ document.addEventListener('keyup', e => {
         }
     })
 })
+/*
+----------------->>>>>> this part is in construction ***
 // typingInpt addition
 function addType() {
     typingInpt++
@@ -101,7 +100,9 @@ function wpm(tp, count, len) {
 
 setTimeout(sdd)
 }
-// scorePlus animation
+*/
+
+// game score addition animation function
 function scorePlus() {
     score++
     plus.play()
@@ -111,7 +112,7 @@ function scorePlus() {
         plus.currentTime = 1
         $scrBox.classList.remove('scorePlus_anim')}, 100)
 }
-// scoreMinus animation
+// game score substractin animation function
 function scoreMinus() {
     score--
     minus.play()
@@ -132,31 +133,5 @@ function blinking (inner, indx) {
     strArr[indx] = `<span class="blink">${char}</span>`
     let contStr = strArr.join('')
     textDash.innerHTML = contStr
-}
-// add wrong letter animation
-function wrong(inner, indx) {
-    let content = inner
-    let strArr = []
-    for ( let i = 0; i < content.length; i++) {
-        strArr.push(content[i])
-    }
-    let char = content[indx]
-    strArr[indx] = `<span class="wrong">${char}</span>`
-    let contStr = strArr.join('')
-    textDash.innerHTML = contStr
-    console.log('wrong anim done')
-}
-// add right letter animation
-function right(inner, indx) {
-    let content = inner
-    let strArr = []
-    for ( let i = 0; i < content.length; i++) {
-        strArr.push(content[i])
-    }
-    let char = content[indx]
-    strArr[indx] = `<span class="right">${char}</span>`
-    let contStr = strArr.join('')
-    textDash.innerHTML = contStr
-    console.log('right anim done')
 }
 

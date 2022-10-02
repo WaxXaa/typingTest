@@ -137,25 +137,3 @@ main {
         background-color: rgb(39, 39, 39);
     }
 }
-/*wrong letter animation*/
-.wrong {
-    color: #fff;
-    animation: wrong 1s linear 1 ;
-    animation-fill-mode: forwards;
-}
-@keyframes wrong {
-    100% {
-        background-color: red;
-    }
-}
-/*rigth letter animation*/
-.right {
-    color: #fff;
-    animation: rigth-an 1s linear 1 ;
-    animation-fill-mode: forwards;
-}
-@keyframes rigth-an {
-    100% {
-        background-color: green;
-    }
-}
